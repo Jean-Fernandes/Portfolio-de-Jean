@@ -16,7 +16,7 @@
     --bg-color: #1f242d;
     --second-bg-color: #292e33;
     --big-font:2.5rem;
-    --norma-font:2rem;
+    --normal-font:2rem;
     --neon-box-shadow:0 0 .5rem #12f7ff;
     --h2-font:3rem;
     --font-neon-text-shadow:0 0 10px rgba(18,247,255,0.3),
@@ -354,8 +354,8 @@ a.btn:nth-child(2)::before{
 }
 
 .home-image{
-    width: 410px;
-    height: 410px;
+    width: 380px;
+    height: 380px;
     opacity: 0;
     animation: zoomIn 1s ease forwards, floatImage 
     3s ease-in-out infinite;
@@ -387,7 +387,6 @@ a.btn:nth-child(2)::before{
     position: absolute;
     width: 100%;
     height: 100%;
-    /* background: linear-gradient(#12f7ff, #f5f5f5, #12f7ff, #f5f5f5); */
     background: linear-gradient(#12f7ff, #f5f5f5, #12f7ff, #f5f5f5, #12f7ff);
     border-radius: 50%;
     animation: circleRotate 5s linear infinite;
@@ -502,3 +501,103 @@ a.btn:nth-child(2)::before{
         transform: rotate(360deg);
     }
 }
+
+
+/* sobre mim seção css */
+
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 2em;
+    background: var(--second-bg-color);
+}
+
+  .img-sobre{
+    width: 430px;
+    height: 430px;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatImage 
+    3s ease-in-out infinite;
+    animation-delay: 1.3s, 2.3s;
+    
+} 
+
+ .img-sobre .glowing-circle{
+    position: relative;
+    right: 10%;
+    /* width: 100%; 
+    height: 100%;  */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+} 
+
+.img-sobre .glowing-circle::after{
+    content: '';
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: var(--bg-color);
+    border-radius: 50%;
+}
+
+.glowing-circle span{
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background: linear-gradient(#12f7ff, #f5f5f5, #12f7ff, #f5f5f5, #12f7ff);
+    border-radius: 50%;
+    animation: circleRotate 5s linear infinite;
+} 
+
+.glowing-circle span:nth-child(1){
+    filter: blur(10px); 
+}
+
+.glowing-circle .image{
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.image img {
+    position: absolute;
+    top: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 350px;
+    object-fit: cover;
+
+}
+
+.sobre-content span{
+    color: #fdfdfd;
+    font-size: .8rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.sobre-content h2{
+    color: var(--hover-color);
+    font-weight: 700;
+    font-size: var(--normal-font);
+}
+
+.sobre-content h3{
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: .2rem;
+}
+
+.sobre-content p{
+    color: #fdfdfd;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
