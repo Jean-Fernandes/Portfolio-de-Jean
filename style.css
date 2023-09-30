@@ -671,6 +671,7 @@ a.btn:nth-child(2)::before{
 }
 
 .box{
+    position: relative;
     margin: 10px 0;
     flex: 1 1 15rem;
 }
