@@ -1120,6 +1120,27 @@ footer a i{
             margin-top: 2rem;
         }
 } */
+@media(max-width:1224px){
+    header,
+    header.sticky{
+        padding: 15px 5%;
+    }
+    footer{
+        padding: 15px 5%;
+    }
+
+    section{
+        padding: 140px 5%;
+    }
+
+    .about-content{
+        max-width: 460px;
+        max-height: 500px;
+    }
+    .img-about {
+        max-width: 380px;
+    }
+
 
 @media(max-width:1024px){
     header,
@@ -1131,14 +1152,14 @@ footer a i{
     }
 
     section{
-        padding: 100px 5%;
+        padding: 80px 5%;
     }
     .navlist a{
         padding: 8px 15px;
     }
     :root{
-        --big-font: 2.2rem;
-        --normal-font: 1.8rem;
+        --big-font: 2.4rem;
+        --normal-font: 1.4rem;
         --neon-box-shadow: 0 0 .8rem #12f7ff;
         --h2-font: 3rem;
     }
@@ -1151,25 +1172,66 @@ footer a i{
         .home-image .glowing-circle::after {
             width: 280px;
             height: 280px;
+            
+        }
+
+        .btn-box{
+            flex-direction: column;
+    
+        }
+
+        .info-box{
+            flex-direction: column;
+            max-width: 280px;
         }
 
         .image img {
             top: 11px;
             max-width: 205px;
+            
         }
         .home-content{
             margin-top: 5rem;
+        }
+
+        .home-content p{
+            max-width: 270px;
+        }
+
+        .home-content h1{
+            max-width: 275px;
         }
 
         .social-icons{
             margin-top: 2rem;
         }
         .about-content{
-            max-width: 400px;
-            max-height: 400px;
+            max-width: 330px;
+            max-height: 330px;
         }
         .img-about {
             max-width: 380px;
+            max-width: 280px;
+            max-height: 280px;
+        }
+
+        .about-image {
+            width: 280px;
+            height: 280px;
+        }
+
+        .img-about .glowing-circle::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .img-about .glowing-circle .image img {
+            top: -19px;
+            max-width: 235px;
+        }
+        .img-about .glowing-circle span {
+            width: 325px;
+            height: 325px;
         }
 
 }
@@ -1222,5 +1284,10 @@ footer a i{
 
     .about{
         flex-direction: column-reverse;
+        max-width: 100%;
+        height: auto;
+    }
+    .home{
+        flex-direction: column;
     }
 }
