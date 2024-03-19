@@ -53,12 +53,23 @@ body {
 }
 
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 1px solid transparent;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     padding: 20px 10%;
 
+}
+
+header.sticky{
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--second-bg-color);
+    padding: 12px 10%;
 }
 
 .logo{
@@ -118,6 +129,10 @@ span{
     0 0 150px rgba(18, 247, 255, 0.6);;
 }
 
+.navlist a.active{
+    color: var(--hover-color);
+}
+
 #menu-icon{
     font-size: 1.8rem;
     z-index: 10001;
@@ -133,7 +148,7 @@ section{
     padding: 100px 10%;
 }
 
-.inicio{
+.home{
     min-height: 80vh;
     height: 100%;
     width: 100%;
@@ -145,12 +160,12 @@ section{
     
 }
 
-.inicio-content{
+.home-content{
     max-width: 430px;
   
 }
 
-.inicio-content h1{
+.home-content h1{
     font-size: var(--big-font);
     font-weight: 700;
     opacity: 0;
@@ -198,7 +213,7 @@ section{
 }
 
 
-.inicio-content p{
+.home-content p{
     color: #bdbdbd;
     line-height: 1.6;
     opacity: 0;
@@ -432,7 +447,7 @@ section{
 
 /* sobre mim seção css */
 
-.sobre {
+.about {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -440,7 +455,7 @@ section{
     background: var(--second-bg-color);
 }
 
-  .img-sobre{
+  .img-about{
     width: 430px;
     height: 430px;
     opacity: 0;
@@ -450,7 +465,7 @@ section{
     
 } 
 
- .img-sobre .glowing-circle{
+ .img-about .glowing-circle{
     position: relative;
     right: 10%;
     /* width: 100%; 
@@ -461,7 +476,7 @@ section{
     align-items: center; 
 } 
 
-.img-sobre .glowing-circle::after{
+.img-about .glowing-circle::after{
     content: '';
     position: absolute;
     width: 380px;
@@ -477,6 +492,7 @@ section{
     background: linear-gradient(#12f7ff, #f5f5f5, #12f7ff, #f5f5f5, #12f7ff);
     border-radius: 50%;
     animation: circleRotate 5s linear infinite;
+    margin: 10px;
 } 
 
 .glowing-circle span:nth-child(1){
@@ -492,7 +508,7 @@ section{
     overflow: hidden;
 }
 
-.img-sobre .glowing-circle .image img{
+.img-about .glowing-circle .image img{
     position: absolute;
     top: -95px;
     left: 50%;
@@ -502,7 +518,7 @@ section{
 
 }
 
-.sobre-content span{
+.about-content span{
     color: #fdfdfd;
     font-size: .8rem;
     font-weight: 200;
@@ -510,16 +526,18 @@ section{
     text-transform: uppercase;
 }
 
-.sobre-content h2{
+.about-content h2{
     color: var(--hover-color);
     font-weight: 700;
     font-size: var(--normal-font);
 }
 
-.sobre-content p{
+.about-content p{
     color: #fdfdfd;
     font-weight: 300;
     margin-bottom: 1.5rem;
+    text-align: justify;
+
 }
 
 /* seção serviços css */
@@ -552,7 +570,7 @@ section{
     grid-gap: 2rem;
 }
 
-.section-services .service-box{
+.section-services .services-box{
     flex: 1 1 18rem;
     padding: 2rem 1rem 2rem;
     text-align: center;
@@ -561,16 +579,16 @@ section{
     border-radius: 10px;
 }
 
-.service-btn{
+.services-btn{
     width: auto;
     justify-content: center;
 }
 
-.service-box:hover{
+.services-box:hover{
     transform: translateY(-.7rem);
 }
 
-.service-icon{
+.services-icon{
     border: 2px solid var(--hover-color);
     padding: 2rem;
     background: var(--bg-color);
@@ -584,12 +602,12 @@ section{
     outline: 3px solid var(--bg-color);
 }
 
-.service-box h3{
+.services-box h3{
     margin-top: 10px;
     font-size: 1.5rem;
 } 
 
-.service-box p{
+.services-box p{
     margin: .5rem 0 1.5rem 0;
     font-weight: 300;
     letter-spacing: 1px;
@@ -602,11 +620,11 @@ section{
 
 
 /* seção habilidades css */
-.habilidades{
+.skills{
     background: var(--second-bg-color);
 }
 
-.habilidades-main{
+.skills-main{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -614,24 +632,24 @@ section{
     grid-column-gap: 50px;
 }
 
-.habilidades-bar{
+.skills-bar{
     margin-bottom: 2.3rem;
 }
 
-.habilidades-main h3{
+.skills-main h3{
     margin-bottom: 2rem;
     font-size: var(--normal-font);
     text-align: center;
 }
 
-.habilidades-left .habilidades-bar .info{
+.skills-left .skills-bar .info{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 10px
 }
 
-.habilidades-left .habilidades-bar .bar{
+.skills-left .skills-bar .bar{
     width: 100%;
     height: 10px;
     background-color: var(--bg-color);
@@ -640,7 +658,7 @@ section{
     position: relative;
 }
 
-.habilidades-bar .bar span{
+.skills-bar .bar span{
     width: 50%;
     height: 100%;
     position:absolute;
@@ -650,32 +668,32 @@ section{
     box-shadow: var(--neon-box-shadow);
 }
 
-.habilidades-bar .bar .html{
+.skills-bar .bar .html{
     width: 83%;
     animation: html 2s;
 }
 
-.habilidades-bar .bar .css{
+.skills-bar .bar .css{
     width: 84%;
     animation: css 3s;
 }
 
-.habilidades-bar .bar .javascript{
+.skills-bar .bar .javascript{
     width: 82%;
     animation: javascript 4s;
 }
 
-.habilidades-bar .bar .react{
+.skills-bar .bar .react{
     width: 85%;
     animation: react 5s;
 }
 
-.habilidades-bar .bar .c{
+.skills-bar .bar .c{
     width: 80%;
     animation: c 6s;
 }
 
-.habilidades-bar .bar .git{
+.skills-bar .bar .git{
     width: 80%;
     animation: git 7s;
 }
@@ -758,7 +776,7 @@ section{
     color: var(--hover-color);
 }
 
-.projetos-gallery{
+.projects-gallery{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(290px , 1fr));
     gap: 2rem;
@@ -846,19 +864,19 @@ section{
 
 /* seção contato css */
 
-.contato{
+.contact{
     background: var(--second-bg-color);
     width: 100%;
 }
 
-.contato form{
+.contact form{
     text-align: center;
     max-width: 50rem;
     margin: 1rem auto;
     margin-bottom: 3rem;
 }
-.contato form input,
-.contato form textarea{
+.contact form input,
+.contact form textarea{
     width: 100%;
     color: var(--text-color);
     background: var(--bg-color);
@@ -868,7 +886,7 @@ section{
     padding: .7rem;
 }
 
-.contato form textarea{
+.contact form textarea{
     resize: none;
 }
 
@@ -1064,5 +1082,145 @@ footer a i{
     100%{
         background: var(--hover-color);
         box-shadow: var(--neon-box-shadow);
+    }
+}
+
+
+
+
+
+/* Break points  */
+
+/* @media(max-width:991px){
+    header,
+    header.sticky{
+        padding: 15px 5%;
+    }
+    footer{
+        padding: 15px 5%;
+    }
+
+    section{
+        padding: 50px 5%;
+    }
+    .navlist a{
+        padding: 8px 15px;
+    }
+    :root{
+        --big-font: 2.2rem;
+        --normal-font: 1.8rem;
+        --neon-box-shadow: 0 0 .8rem #12f7ff;
+        --h2-font: 3rem;
+    }
+        .home-content{
+            margin-top: 5rem;
+        }
+
+        .social-icons{
+            margin-top: 2rem;
+        }
+} */
+
+@media(max-width:1024px){
+    header,
+    header.sticky{
+        padding: 15px 5%;
+    }
+    footer{
+        padding: 15px 5%;
+    }
+
+    section{
+        padding: 100px 5%;
+    }
+    .navlist a{
+        padding: 8px 15px;
+    }
+    :root{
+        --big-font: 2.2rem;
+        --normal-font: 1.8rem;
+        --neon-box-shadow: 0 0 .8rem #12f7ff;
+        --h2-font: 3rem;
+    }
+
+        .home-image {
+            width: 280px;
+            height: 280px;
+        }
+
+        .home-image .glowing-circle::after {
+            width: 280px;
+            height: 280px;
+        }
+
+        .image img {
+            top: 11px;
+            max-width: 205px;
+        }
+        .home-content{
+            margin-top: 5rem;
+        }
+
+        .social-icons{
+            margin-top: 2rem;
+        }
+        .about-content{
+            max-width: 400px;
+            max-height: 400px;
+        }
+        .img-about {
+            max-width: 380px;
+        }
+
+}
+
+@media(max-width:768px){
+    #menu-icon{
+        display: block;
+        transition: all .4s ease;
+    }
+
+    #menu-icon.bx-x {
+        transform: rotate(-180deg);
+    }
+
+    .navlist{
+        display: flex;
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        background: var(--bg-color);
+        text-align: left;
+        padding: 0 5%;
+        transition: all .45s ease;
+    }
+    .navlist a{
+        display: block;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+    }
+
+    .navlist.open{
+        top: 100%;
+    }
+
+    .home{
+        grid-template-columns: 1fr;
+    }
+
+    .home-image{
+        margin-bottom: 5rem;
+    }
+
+    .liquid-shape{
+        width: 80%;
+        left: 10%;
+        top: 13%;
+    }
+
+    .about{
+        flex-direction: column-reverse;
     }
 }
