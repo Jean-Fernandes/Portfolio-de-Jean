@@ -1090,36 +1090,6 @@ footer a i{
 
 
 /* Break points  */
-
-/* @media(max-width:991px){
-    header,
-    header.sticky{
-        padding: 15px 5%;
-    }
-    footer{
-        padding: 15px 5%;
-    }
-
-    section{
-        padding: 50px 5%;
-    }
-    .navlist a{
-        padding: 8px 15px;
-    }
-    :root{
-        --big-font: 2.2rem;
-        --normal-font: 1.8rem;
-        --neon-box-shadow: 0 0 .8rem #12f7ff;
-        --h2-font: 3rem;
-    }
-        .home-content{
-            margin-top: 5rem;
-        }
-
-        .social-icons{
-            margin-top: 2rem;
-        }
-} */
 @media(max-width:1224px){
     header,
     header.sticky{
@@ -1140,7 +1110,7 @@ footer a i{
     .img-about {
         max-width: 380px;
     }
-
+}
 
 @media(max-width:1024px){
     header,
@@ -1176,13 +1146,14 @@ footer a i{
         }
 
         .btn-box{
-            flex-direction: column;
+            flex-direction: row;
     
         }
 
         .info-box{
-            flex-direction: column;
+            flex-direction: row;
             max-width: 280px;
+            gap: 2rem;
         }
 
         .image img {
@@ -1195,11 +1166,11 @@ footer a i{
         }
 
         .home-content p{
-            max-width: 270px;
+            max-width: 330px;
         }
 
         .home-content h1{
-            max-width: 275px;
+            max-width: 450px;
         }
 
         .social-icons{
@@ -1233,10 +1204,94 @@ footer a i{
             width: 325px;
             height: 325px;
         }
-
+        .github-info {
+            padding-right: 60px;
+        }
 }
 
 @media(max-width:768px){
+    .home-image {
+        width: 330px;
+        height: 330px;
+       
+    }
+
+    .image img {
+        justify-content: center;
+        max-width: 245px;
+        top: -20px;
+    }
+
+    .home-image .glowing-circle{
+        left: 0px;
+    }
+
+    .home-image .glowing-circle::after {
+        width: 330px;
+        height: 330px;
+       
+        
+    }
+
+    .btn-box{
+        flex-direction: row;
+        margin-top: -0.8rem;
+
+    }
+
+    .info-box{
+        flex-direction: row;
+        max-width: 600px;
+    }
+
+    .home-content{
+        margin-top: 2rem;
+    }
+
+    .home-content p{
+        max-width: 600px;
+    }
+
+    .home-content h1{
+        max-width: 600px;
+    }
+
+    .social-icons{
+        margin-top: 2rem;
+        margin-left: 5rem;
+    }
+
+    .about-content{
+        max-width: 430px;
+        max-height: 430px;
+    }
+
+    
+
+    .img-about {
+        max-width: 280px;
+        max-height: 280px;
+    }
+
+    .about-image {
+        width: 280px;
+        height: 280px;
+    }
+
+    .img-about .glowing-circle::after {
+        width: 300px;
+        height: 300px;
+    }
+
+    .img-about .glowing-circle .image img {
+        top: -19px;
+        max-width: 235px;
+    }
+    .img-about .glowing-circle span {
+        width: 325px;
+        height: 325px;
+    }
+
     #menu-icon{
         display: block;
         transition: all .4s ease;
@@ -1287,7 +1342,127 @@ footer a i{
         max-width: 100%;
         height: auto;
     }
+
+    .about .btn-box{
+        justify-content: center;
+    }
+
     .home{
         flex-direction: column;
+    }
+
+    .skills-main{
+        grid-template-columns: 1fr;
+    }
+
+    .fillter-buttons{
+        margin: 2.5rem 0;
+    }
+
+    .img-about {
+        max-width: 280px;
+        max-height: 280px;
+        padding-left: 70px;
+    }
+}
+
+@media(max-width:460px){
+    .home-image {
+        width: 250px;
+        height: 250px;
+       
+    }
+
+    .home-image .glowing-circle{
+        left: 0px;
+    }
+
+    .image img {
+        width: 215px;
+        height: 220px;
+        top: 74px;
+    }
+
+    .home-image .glowing-circle::after {
+        width: 250px;
+        height: 250px;
+       
+        
+    }
+
+    .btn-box{
+        flex-direction: col;
+        margin-top: -0.8rem;
+        width: 90%;
+        margin-left: -0.5rem;
+        gap: 1rem;
+        margin-top: 3px;
+    }
+
+    .info-box{
+        flex-direction: column;
+        max-width: 400px;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .home-content{
+        margin-top: 2rem;
+    
+        
+    }
+
+    .home-content p{
+        max-width: 320px;
+    }
+
+    .home-content h1{
+        max-width: 300px;
+    }
+
+    .home-content {
+        padding-left: 50px;
+
+    }
+
+    .social-icons{
+        margin-top: 2rem;
+        margin-left: 3rem;
+        padding-right: 50px;
+    }
+
+    .about-content{
+        max-width: 430px;
+        max-height: 430px;
+    }
+    .img-about {
+        max-width: 280px;
+        max-height: 280px;
+        padding-left: 70px;
+    }
+
+    .about-image {
+        width: 280px;
+        height: 280px;
+    }
+
+    .img-about .glowing-circle::after {
+        width: 300px;
+        height: 300px;
+    }
+
+    .img-about .glowing-circle .image img {
+        top: -8px; 
+        max-width: 400px;
+        height: 340px;
+    }
+    .img-about .glowing-circle span {
+        width: 325px;
+        height: 325px;
+    }
+    .github-info {
+        padding-right: 60px;
     }
 }
