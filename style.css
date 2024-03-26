@@ -149,7 +149,7 @@ section{
 }
 
 .home{
-    min-height: 80vh;
+    min-height: 100vh;
     height: 100%;
     width: 100%;
     display: flex;
@@ -448,6 +448,7 @@ section{
 /* sobre mim seção css */
 
 .about {
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1090,6 +1091,7 @@ footer a i{
 
 
 /* Break points  */
+
 @media(max-width:1224px){
     header,
     header.sticky{
