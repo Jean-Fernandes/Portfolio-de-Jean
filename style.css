@@ -458,7 +458,7 @@ section{
 
   .img-about{
     width: 430px;
-    height: 430px;
+    /* height: 430px; */
     opacity: 0;
     animation: zoomIn 1s ease forwards, floatImage 
     3s ease-in-out infinite;

@@ -59,8 +59,8 @@ circles.forEach(elem=>{
     }
 })
 
-// mix it up seção projetos
-var mixer = mixitup('.projetos-gallery');
+// // mix it up seção projetos
+// var mixer = mixitup('.projetos-gallery');
 
 
 // active menu//
