@@ -1410,6 +1410,22 @@ footer a i{
         margin-bottom: 20px;
     }
 
+    .info-box .email-info{
+        flex-direction: column;
+        max-width: 270px;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-box .github-info{
+        flex-direction: column;
+        max-width: 270px;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+
     .home-content{
         margin-top: 2rem;
     
