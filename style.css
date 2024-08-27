@@ -402,6 +402,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 10px;
 }
 
 .home-image .glowing-circle::after{
@@ -475,6 +476,8 @@ section{
     display: flex;
     justify-content: center;
     align-items: center; 
+    top: 50px;
+    
 } 
 
 .img-about .glowing-circle::after{
