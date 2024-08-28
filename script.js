@@ -59,10 +59,6 @@ circles.forEach(elem=>{
     }
 })
 
-// // mix it up seção projetos
-// var mixer = mixitup('.projetos-gallery');
-
-
 // active menu//
 let menuLi = document.querySelectorAll('header ul li a');
 let section = document.querySelectorAll('section');
