@@ -2,7 +2,7 @@
 
 Este é o repositório do meu portfólio pessoal, desenvolvido para apresentar meus projetos, habilidades e experiências. O site está disponível em: jeancarlos-nu.vercel.app
 
-🛠️ Tecnologias Utilizadas
+# 🛠️ Tecnologias Utilizadas
 
 HTML: Linguagem de marcação utilizada para estruturar o conteúdo.
 
@@ -12,7 +12,7 @@ JavaScript: Linguagem de programação utilizada para adicionar interatividade e
 
 Vercel: Plataforma de hospedagem para o frontend moderno.
 
-🚀 Funcionalidades
+# 🚀 Funcionalidades
 
 Home: Página inicial com uma visão geral do portfólio.
 
@@ -26,7 +26,7 @@ Projetos: Apresentação dos meus projetos de desenvolvimento com descrições e
 
 Contato: Formulário para que visitantes possam entrar em contato diretamente comigo.
 
-📞 Contato
+# 📞 Contato
 
 Para mais informações, você pode entrar em contato comigo através das seguintes plataformas:
 
@@ -36,6 +36,6 @@ GitHub: github.com/Jean-Fernandes
 
 Email: jeancarlosdev@hotmail.com
 
-📝 Licença
+# 📝 Licença
 
 Este projeto está licenciado sob a licença MIT. Consulte o arquivo LICENSE para mais informações.
